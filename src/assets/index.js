@@ -1,10 +1,5 @@
-import { ReactComponent as HIDE_MODAL } from './svgs/right-arrow.svg';
-const IMAGEPATH = './image/';
+import {ReactComponent as HIDE_MODAL} from "./svgs/right-arrow.svg";
 
 export const svgs = {
-    HIDE_MODAL
-}
-
-export const jpgs = {
-    CART: require(`${IMAGEPATH}cart.jpg`)
-}
+  HIDE_MODAL,
+};

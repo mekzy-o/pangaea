@@ -1,32 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './pages/App';
-import { BrowserRouter } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
-import {ApolloClient} from 'apollo-client';
-import {InMemoryCache} from 'apollo-cache-inmemory';
-import {HttpLink} from 'apollo-link-http';
-import {ApolloProvider} from '@apollo/react-hooks';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./pages/App";
+import {BrowserRouter} from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import {ApolloClient} from "apollo-client";
+import {InMemoryCache} from "apollo-cache-inmemory";
+import {HttpLink} from "apollo-link-http";
+import {ApolloProvider} from "@apollo/react-hooks";
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri:'https://pangaea-interviews.now.sh/api/graphql'
-})
+  uri: "https://pangaea-interviews.now.sh/api/graphql",
+});
 
 const client = new ApolloClient({
   cache,
-  link
-})
+  link,
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <BrowserRouter> 
+      <BrowserRouter>
         <App />
       </BrowserRouter>
-      </ApolloProvider>
+    </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

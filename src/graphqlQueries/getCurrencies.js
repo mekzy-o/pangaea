@@ -1,7 +1,7 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const GET_CURRENCIES = gql`
-    query currency {
-        currency
-    }
-`
+  query currency {
+    currency
+  }
+`;
